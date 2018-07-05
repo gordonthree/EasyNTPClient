@@ -1,6 +1,7 @@
 # EasyNTPClient 
 
 FORK: This fork addes the ability to read and change the NTP server being used.
+
 Arduino library to read time from Network Time Protocol (NTP) servers.
 
 &nbsp;
@@ -81,4 +82,20 @@ unsigned long getUnixTime();
 
 Returns:
     UTC time in UNIX time format (seconds)
+```
+
+4. Set NTP Server
+```c
+void setNTPServer(const char* serverPool)
+
+Parameters:
+    serverPool: DNS name or IP address for the NTP server or pool you wish to use.
+```
+
+5. Read NTP server currently in use.
+```c
+const char* getNTPServer();
+
+Returns:
+    DNS name or IP address that was set for the NTP server or pool.
 ```
