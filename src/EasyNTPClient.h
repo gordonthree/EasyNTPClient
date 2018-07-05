@@ -24,6 +24,8 @@ class EasyNTPClient
     EasyNTPClient(UDP& udp, const char* serverPool);
     EasyNTPClient(UDP& udp, const char* serverPool, int offset);
     int getTimeOffset();
+    void setNTPServer(const char* serverPool);
+    char* getNTPServer();
     void setTimeOffset(int offset);
     unsigned long getUnixTime();
     

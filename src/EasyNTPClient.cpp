@@ -38,6 +38,13 @@ void EasyNTPClient::setTimeOffset (int offset) {
   this->mOffset = offset;
 }
 
+void EasyNTPClient::setNTPServer (const char* serverPool) {
+  this->mServerPool = serverPool;
+}
+
+char* EasyNTPClient::getNTPServer() {
+  return this->mServerPool;
+}
 
 unsigned long EasyNTPClient::getServerTime () {
     static int udpInited = this->mUdp->begin(123); // open socket on arbitrary port
