@@ -42,7 +42,7 @@ void EasyNTPClient::setNTPServer (const char* serverPool) {
   this->mServerPool = serverPool;
 }
 
-char* EasyNTPClient::getNTPServer() {
+const char* EasyNTPClient::getNTPServer() {
   return this->mServerPool;
 }
 
